@@ -12,10 +12,10 @@ module.exports.processQueue = async (event) => {
 module.exports.processWebhook = async (event) => {
   const body = JSON.parse(event.body);
   const { repository, sender } = body;
-  const repo = repository.name;
-  const stars = repository.stargazers_count;
-  const username = sender.login;
-  const url = sender.html_url;
+  const repo = 'repository.name';
+  const stars = 'repository.stargazers_count';
+  const username = 'sender.login';
+  const url = 'sender.html_url';
 
   console.log(`body ... ${body}`)
 
