@@ -10,6 +10,7 @@ module.exports.processQueue = async (event) => {
 };
 
 module.exports.processWebhook = async (event) => {
+  console.log(`event ... ${JSON.parse(event)}`)
   const body = JSON.parse(event.body);
   const { repository, sender } = body;
   const repo = 'repository.name';
