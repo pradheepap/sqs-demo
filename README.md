@@ -32,8 +32,6 @@ To run this project, you will need to add the following environment variables to
 ## CloudFormation Design
 
 ![Information Arch](sqs-app-cf-design.png?raw=true "SQS App")
-  
-## Appendix
+  ## Acknowledgements
 
-
-  
+ - [Created using readme.so](https://readme.so/)
