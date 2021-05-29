@@ -1,8 +1,16 @@
-sqs:
-  handler: handler.processQueue
+processQueue:
+  handler: src/handler.processQueue
   events:
     - sqs:
         arn:
           Fn::GetAtt:
             - AppQueue
             - Arn
+processWebhook:
+  handler: src/handler.processWebhook
+  environment:
+    slackUrl: ${env:slackUrl}
+  events:
+    - httpApi:
+        path: /
+        method: post
