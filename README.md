@@ -34,4 +34,4 @@ To run this project, you will need to add the following environment variables to
 ![Information Arch](sqs-app-cf-design.png?raw=true "SQS App")
   ## Acknowledgements
 
- - [Created using readme.so](https://readme.so/)
+ - [This page is created using readme.so](https://readme.so/)
