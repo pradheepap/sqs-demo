@@ -10,15 +10,15 @@ module.exports.processQueue = async (event) => {
 };
 
 module.exports.processWebhook = async (event) => {
-  console.log(`event ... ${JSON.parse(event)}`)
+  console.log(`event ... ${JSON.stringify(event)}`);
   const body = JSON.parse(event.body);
   const { repository, sender } = body;
-  const repo = 'repository.name';
-  const stars = 'repository.stargazers_count';
-  const username = 'sender.login';
-  const url = 'sender.html_url';
+  const repo = repository.name;
+  const stars = repository.stargazers_count;
+  const username = sender.login;
+  const url = sender.html_url;
 
-  console.log(`body ... ${body}`)
+  console.log(`body ... ${JSON.stringify(body)}`);
 
   const message = {
     attachments: [
@@ -43,7 +43,7 @@ module.exports.processWebhook = async (event) => {
     data: data,
   };
 
-  axios(config)
+  await axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
     })
