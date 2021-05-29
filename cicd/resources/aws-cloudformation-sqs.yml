@@ -1,0 +1,6 @@
+Description: AWS SQS Application
+Resources:
+  AppQueue:
+    Type: "AWS::SQS::Queue"
+    Properties:
+      QueueName: "AppQueue"

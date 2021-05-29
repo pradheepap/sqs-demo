@@ -1,0 +1,8 @@
+sqs:
+  handler: handler.processQueue
+  events:
+    - sqs:
+        arn:
+          Fn::GetAtt:
+            - AppQueue
+            - Arn
