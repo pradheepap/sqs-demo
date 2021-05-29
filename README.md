@@ -27,6 +27,7 @@ To run this project, you will need to add the following environment variables to
 
 - Create SQS Queue
 - Lambda is Triggered when SQS Queue sends message
+- Create Slack Notification Via Webhook
 
   
 ## CloudFormation Design
